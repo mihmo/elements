@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Переключатель страниц, тестирование</title>
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+    font-family: "PT Sans", sans-serif;
+  }
+
+  .paginator {
+    width: 280px;
+    margin: 30px auto;
+    padding: 10px;
+
+    white-space: nowrap;
+
+    background-color: #ecf0f1;
+  }
+
+  .paginator a,
+  .paginator span {
+    display: inline-block;
+    min-width: 20px;
+    height: 40px;
+    padding: 0 10px;
+
+    font-weight: bold;
+    line-height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+
+    background-color: #95a5a6;
+  }
+
+  .paginator .prev {
+    margin-right: 20px;
+
+    text-indent: -1000px;
+
+    background-image: url("arrows.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .paginator .next {
+    margin-left: 20px;
+
+    text-indent: -1000px;
+
+    background-image: url("arrows.png");
+    background-repeat: no-repeat;
+    background-position: 0 -40px;
+  }
+
+  .paginator .current {
+    background-color: #16a085;
+  }
+
+  .paginator .disabled {
+    opacity: 0.3;
+  }
+
+  .paginator a:hover {
+    background-color: #2ecc71;
+  }
+  </style>
+  
+  <body>
+    <div class="paginator">
+      <a class="prev disabled" href="#prev">Назад</a>
+      <a class="current" href="#1">1</a>
+      <span>&hellip;</span>
+      <a href="#100">100</a>
+      <a class="next" href="#next">Вперёд</a>
+    </div>
+    <div class="paginator">
+      <a class="prev" href="#prev">Назад</a>
+      <a class="current" href="#53">53</a>
+      <span>&hellip;</span>
+      <a href="#100">100</a>
+      <a class="next" href="#next">Вперёд</a>
+    </div>
+    <div class="paginator">
+      <a class="prev" href="#prev">Назад</a>
+      <a href="#97">97</a>
+      <span>&hellip;</span>
+      <a class="current" href="#100">100</a>
+      <a class="next disabled" href="#next">Вперёд</a>
+    </div>
+  </body>
+</html>
